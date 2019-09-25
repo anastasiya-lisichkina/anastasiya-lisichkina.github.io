@@ -1,0 +1,23 @@
+{
+  "name": "mimusic",
+  "version": "1.0.0",
+  "description": "my final project on HTML, CSS, JavaScript course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anastasiya-lisichkina/mimusic.git"
+  },
+  "author": "Anastasiya Lisichkina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anastasiya-lisichkina/mimusic/issues"
+  },
+  "homepage": "https://github.com/anastasiya-lisichkina/mimusic#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
+  }
+}
