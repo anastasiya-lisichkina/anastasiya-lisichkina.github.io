@@ -1,0 +1,97 @@
+@mixin font-face($font-family, $font-local, $file-path) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: local($font-local);
+        src: url("#{$file-path}.ttf") format("truetype");
+    }
+}
+
+@include font-face(BarlowBold, Arial, "../fonts/Barlow-Bold");
+
+@mixin container($max-width, $width, $margin, $padding) {
+    max-width: $max-width;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    @include container(1820px, 100%, 0 auto, 0 50px);
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 120px;
+    font-family: "BarlowBold";
+    letter-spacing: 6px;
+    background: linear-gradient(to right, rgb(27 ,37, 80), rgb(1, 60, 154));
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 70px 0 50px;
+        box-sizing: border-box; 
+    }
+
+    .logo {
+        align-items: center;
+        font-size: calc(16px * 1.5);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .logo-bg {
+        padding: 10px;
+        background-color: #032c9e;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .main-navigation {
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            padding: 0 20px;
+            text-decoration: none;
+            color: #fff;
+            &:hover, &:hover:before, &:hover:after {
+                text-decoration: line-through;
+                transition: .3s;
+            }
+        }
+
+    }
+
+    .social-navigation {
+            display: flex;
+            list-style: none;
+            padding: 0 0 0 10px;
+
+            li {
+                padding: 0 13px;
+            }
+        }
+}
+
+
+
+
+
