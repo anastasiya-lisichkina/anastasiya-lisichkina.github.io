@@ -24,34 +24,35 @@ body {
 }
 
 .container{
-    @include container(1800px, 100%, 0 auto, 0);
+    @include container(1857px, 100%, 0 auto, 0 19px);
 }
 
 header {
     position: absolute;
     z-index: 10;
     width: 100%;
-    height: 120px;
+    height: 140px;
     font-family: "BarlowBold";
-    letter-spacing: 6px;
+    letter-spacing: 3px;
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        padding: 0 20px 0 0;
         box-sizing: border-box; 
 
         .logo {
             align-items: center;
             font-size: calc(1rem * 1.5);
             color: #fff;
+            letter-spacing: 6px;
             text-decoration: none;
         }
     
         .logo-bg {
-            padding: 10px;
+            padding: 6px 8px 6px 8px;
+            margin-right: -4px;
             background-color: #032c9e;
         }
     
@@ -71,7 +72,7 @@ header {
     
             a {
                 position: relative;
-                padding: 0 25px;
+                padding: 0 27px;
                 text-decoration: none;
                 color: #fff;
 
@@ -90,10 +91,10 @@ header {
         .social-navigation {
                 display: flex;
                 list-style: none;
-                padding: 0 0 0 10px;
-    
+                padding: 0;
+                
                 li {
-                    padding: 0 13px;
+                    padding: 0 16px;
                 }
             }
         }
@@ -106,13 +107,13 @@ header {
     padding: 488px 0 439px 0;
     background: linear-gradient(to right, rgba(27, 37, 80, 20%), rgba(1, 60, 154, 85%)), url("../images/zachary-nelson-HPYk8X9hh34-unsplash.jpg") no-repeat center/cover;
     filter: contrast(1.35);
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 81.5%);
 
     .container {
+        @include container(1475px, 100%, 0 auto, 0 19px);
         display: flex;
-        justify-content: space-between;
-        max-width: 1480px;
-        padding: 0 70px 0 370px;
+        justify-content: space-around;
+       
 
         .content {
             display: flex;
@@ -121,7 +122,7 @@ header {
             .caption {
                 width: 600px;
                 height: 42px;
-                background: linear-gradient(to right, #1b2550 520px, #fb516e 0% 535px, #6aff7f 535px);
+                background: linear-gradient(to right, #1b2550 520px, #fb516e 520px, #fb516e 535px, #6aff7f 535px);
 
                 h3 {
                     margin: 0;
@@ -135,6 +136,7 @@ header {
 
             h1 {
                 margin: 0;
+                padding-top: 5px;
                 font-family: "BarlowBold";
                 font-size: calc(1rem * 7.5);
                 color: #fff
@@ -142,8 +144,10 @@ header {
 
             h4 {
                 margin: 0;
+                padding-top: 7px;
                 font-family: "BarlowMedium";
                 font-size: calc(1rem * 2.25);
+                font-weight: 100;
                 color: #fff
             }
 
@@ -200,7 +204,7 @@ header {
     z-index: 7;
     width: 100%;
     height: 2246px;
-    margin-top: -258px;
+    margin-top: -240px;
     padding: 330px 0 300px 0;
     background: #0f152c;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 95%);
@@ -213,8 +217,8 @@ header {
         position: absolute;
         z-index: 6;
         width: 100%;
-        margin-top: -360px;
-        padding: 330px 0 558px 0;
+        margin-top: -330px;
+        padding: 312px 0 558px 0;
         background: url(../images/austin-neill.png) no-repeat center;
 
         /*#shape-1-copy {
@@ -233,14 +237,14 @@ header {
         }*/
 
         .container {
-            @include container(1170px, 100%, 0 auto, 0);
+            @include container(1170px, 100%, 0 auto, 0 19px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
             h2 {
                 margin: 0;
-                padding-bottom: 40px;
+                padding-bottom: 27px;
                 font-family: "BarlowSemiBold";
                 font-size: calc(1rem * 3.75);
                 color: #fff
@@ -249,13 +253,13 @@ header {
             .divider {
                 width: 145px;
                 height: 5px;
-                background: linear-gradient(to right, #33cbcc 125px, #032c9e 0% 135px, #6aff7f 135px);
+                background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
             }
 
             .live-date-1 {
                 display: flex;
                 justify-content: space-between;
-                padding: 118px 0 30px 0;
+                padding: 133px 0 40px 0;
                 border-bottom: 0.5px solid rgba(255, 255, 255, .5);
 
                 .date {
@@ -275,26 +279,24 @@ header {
                 }
 
                 .img {
-
-                    img {
-                        margin-left: -4px;
-                        height: 80px;
-                        border-radius: 0 10px 10px 0; 
-                    }
+                    height: 82px;
+                    width: 230px;
+                    border-radius: 10px;
+                    background: url(../images/melanie-van-leeuwen.jpg) no-repeat center/cover;
+                    background-position: 78px -14px;
+                    background-size: 70%;
     
                     &::before {
                         content: "";
-                        display: inline-block;
-                        height: 95%;
-                        padding-left: 80px;
-                        border-radius: 10px 0 0 10px;
+                        padding: 0 0px 63px 80px;
                         background: #1b2550;
+                        border-radius: 10px 0 0 10px;
                     }
                 }
                 
                 .title {
-                    margin-left: -50px;
-                    padding-top: 10px;
+                    margin-left: -15px;
+                    padding-top: 5px;
                     display: flex;
                     flex-direction: column;
 
@@ -361,7 +363,7 @@ header {
             .live-date-2 {
                 display: flex;
                 justify-content: space-between;
-                padding: 30px 0 30px 0;
+                padding: 40px 0 35px 0;
                 border-bottom: 0.5px solid rgba(255, 255, 255, .5);
 
                 .date {
@@ -381,26 +383,24 @@ header {
                 }
 
                 .img {
-
-                    img {
-                        margin-left: -4px;
-                        height: 80px;
-                        border-radius: 0 10px 10px 0; 
-                    }
+                    height: 80px;
+                    width: 230px;
+                    border-radius: 10px;
+                    background: url(../images/john-raptis.jpg) no-repeat center/cover;
+                    background-position: 78px -14px;
+                    background-size: 70%;
     
                     &::before {
                         content: "";
-                        display: inline-block;
-                        height: 95%;
-                        padding-left: 80px;
-                        border-radius: 10px 0 0 10px;
+                        padding: 0 0px 63px 80px;
                         background: #1b2550;
+                        border-radius: 10px 0 0 10px;
                     }
                 }
                 
                 .title {
-                    margin-left: -50px;
-                    padding-top: 10px;
+                    margin-left: -15px;
+                    padding-top: 5px;
                     display: flex;
                     flex-direction: column;
 
@@ -467,7 +467,7 @@ header {
             .live-date-3 {
                 display: flex;
                 justify-content: space-between;
-                padding: 30px 0 30px 0;
+                padding: 40px 0 38px 0;
                 border-bottom: 0.5px solid rgba(255, 255, 255, .5);
 
                 .date {
@@ -487,26 +487,24 @@ header {
                 }
 
                 .img {
-
-                    img {
-                        margin-left: -4px;
-                        height: 80px;
-                        border-radius: 0 10px 10px 0; 
-                    }
+                    height: 80px;
+                    width: 230px;
+                    border-radius: 10px;
+                    background: url(../images/edward-cisneroes.jpg) no-repeat center/cover;
+                    background-position: 75px -2px;
+                    background-size: 70%;
     
                     &::before {
                         content: "";
-                        display: inline-block;
-                        height: 95%;
-                        padding-left: 80px;
-                        border-radius: 10px 0 0 10px;
+                        padding: 0 0px 63px 80px;
                         background: #1b2550;
+                        border-radius: 10px 0 0 10px;
                     }
                 }
-                
+
                 .title {
-                    margin-left: -50px;
-                    padding-top: 10px;
+                    margin-left: -15px;
+                    padding-top: 5px;
                     display: flex;
                     flex-direction: column;
 
@@ -573,7 +571,7 @@ header {
             .live-date-4 {
                 display: flex;
                 justify-content: space-between;
-                padding: 30px 0 30px 0;
+                padding: 40px 0 36px 0;
                 border-bottom: 0.5px solid rgba(255, 255, 255, .5);
 
                 .date {
@@ -593,26 +591,24 @@ header {
                 }
 
                 .img {
-
-                    img {
-                        margin-left: -4px;
-                        height: 80px;
-                        border-radius: 0 10px 10px 0; 
-                    }
+                    height: 80px;
+                    width: 230px;
+                    border-radius: 10px;
+                    background: url(../images/william-white.jpg) no-repeat center/cover;
+                    background-position: 77px -18px;
+                    background-size: 73%;
     
                     &::before {
                         content: "";
-                        display: inline-block;
-                        height: 95%;
-                        padding-left: 80px;
-                        border-radius: 10px 0 0 10px;
+                        padding: 0 0px 63px 80px;
                         background: #1b2550;
+                        border-radius: 10px 0 0 10px;
                     }
                 }
                 
                 .title {
-                    margin-left: -50px;
-                    padding-top: 10px;
+                    margin-left: -15px;
+                    padding-top: 5px;
                     display: flex;
                     flex-direction: column;
 
@@ -679,7 +675,7 @@ header {
             .live-date-5 {
                 display: flex;
                 justify-content: space-between;
-                padding: 30px 0 80px 0;
+                padding: 40px 0 70px 0;
 
                 .date {
                     position: absolute;
@@ -698,26 +694,24 @@ header {
                 }
 
                 .img {
-
-                    img {
-                        margin-left: -4px;
-                        height: 80px;
-                        border-radius: 0 10px 10px 0; 
-                    }
+                    height: 80px;
+                    width: 230px;
+                    border-radius: 10px;
+                    background: url(../images/maelle-ramsay.jpg) no-repeat center/cover;
+                    background-position: 77px 0px;
+                    background-size: 65%;
     
                     &::before {
                         content: "";
-                        display: inline-block;
-                        height:95;
-                        padding-left: 80px;
-                        border-radius: 10px 0 0 10px;
+                        padding: 0 0px 63px 80px;
                         background: #1b2550;
+                        border-radius: 10px 0 0 10px;
                     }
                 }
                 
                 .title {
-                    margin-left: -50px;
-                    padding-top: 10px;
+                    margin-left: -15px;
+                    padding-top: 5px;
                     display: flex;
                     flex-direction: column;
 
