@@ -183,7 +183,6 @@ header .container .social-navigation li {
 
 .wr-album-livedates {
   position: relative;
-  z-index: 7;
   width: 100%;
   height: 2246px;
   margin-top: -240px;
@@ -195,26 +194,13 @@ header .container .social-navigation li {
   position: absolute;
 }
 .wr-album-livedates .wr-live-dates {
-  position: absolute;
-  z-index: 6;
+  position: relative;
   width: 100%;
   margin-top: -330px;
-  padding: 312px 0 558px 0;
-  background: url(../images/austin-neill.png) no-repeat center;
-  /*#shape-1-copy {
-      width: 2574px;
-      height: 2246px;
-      fill: url(#linear-gradient-shape-1-copy);
-  }
-
-  #shape-1 {
-      position: absolute;
-      margin-top: -360px;
-      width: 100%;
-      height: 2422px;
-      z-index: 5;
-      fill: url(#linear-gradient-shape-1)
-  }*/
+  padding: 312px 0 818px 0;
+  background-image: url(../images/ellipse-1-copy-3.png), url(../images/ellipse-1-copy-2.png), url(../images/ellipse-1.png), url(../images/austin-neill.png), url(../images/shape-1.png), url(../images/shape-1-copy.png);
+  background-position: 11.5% 39.5%, 5.5% 35%, 125% 68%, 43% -93%, 62% 96%, 64% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 .wr-album-livedates .wr-live-dates .container {
   max-width: 1170px;
@@ -235,15 +221,16 @@ header .container .social-navigation li {
 .wr-album-livedates .wr-live-dates .container .divider {
   width: 145px;
   height: 5px;
+  margin-bottom: 95px;
   background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 {
+.wr-album-livedates .wr-live-dates .container .live-date {
   display: flex;
   justify-content: space-between;
-  padding: 133px 0 40px 0;
+  padding: 40px 0 38px 0;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .date {
+.wr-album-livedates .wr-live-dates .container .live-date .date {
   position: absolute;
   display: flex;
   padding: 10px 23px 10px 22px;
@@ -252,12 +239,12 @@ header .container .social-navigation li {
   font-size: calc(1rem * 1.125);
   color: #fff;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .date .date-number {
+.wr-album-livedates .wr-live-dates .container .live-date .date .date-number {
   letter-spacing: 6px;
   font-size: calc(1rem * 1.875);
   color: #fb516e;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .img {
+.wr-album-livedates .wr-live-dates .container .live-date .img {
   height: 82px;
   width: 230px;
   border-radius: 10px;
@@ -265,230 +252,88 @@ header .container .social-navigation li {
   background-position: 78px -14px;
   background-size: 70%;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .img::before {
+.wr-album-livedates .wr-live-dates .container .live-date .img::before {
   content: "";
   padding: 0 0px 63px 80px;
   background: #1b2550;
   border-radius: 10px 0 0 10px;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .title {
-  margin-left: -15px;
+.wr-album-livedates .wr-live-dates .container .live-date .title {
+  margin-left: -60px;
   padding-top: 5px;
   display: flex;
   flex-direction: column;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .title h5 {
+.wr-album-livedates .wr-live-dates .container .live-date .title h5 {
   margin: 0;
   font-family: "BarlowSemiBold";
   font-size: calc(1rem * 1.625);
   color: #fff;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .title span {
+.wr-album-livedates .wr-live-dates .container .live-date .title span {
   padding-top: 15px;
   font-family: "RobotoRegular";
   color: #778fc3;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .location-and-time {
-  margin-left: 150px;
-  padding-top: 15px;
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time {
+  padding-left: 105px;
   display: flex;
   flex-direction: column;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .location-and-time .location span {
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .location {
+  padding-top: 10px;
+}
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .location svg {
+  width: 24px;
+  height: 24px;
+  padding-left: 3px;
+}
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .location svg circle, .wr-album-livedates .wr-live-dates .container .live-date .location-and-time .location svg polygon {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  stroke-linejoin: miter;
+}
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .location span {
   display: inline-block;
-  padding: 3px 0 0 44px;
+  padding-left: 44px;
   font-family: "RobotoRegular";
   color: #778fc3;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .location-and-time .time {
-  padding-top: 21px;
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .time {
+  padding-top: 15px;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .location-and-time .time span {
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .time span {
   display: inline-block;
   padding: 3px 0 0 44px;
   font-family: "RobotoRegular";
   color: #6aff7f;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .button-normal {
-  padding-top: 10px;
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .time svg {
+  width: 24px;
+  height: 24px;
+  padding-left: 3px;
 }
-.wr-album-livedates .wr-live-dates .container .live-date-1 .button-normal button {
-  padding: 26px 40px;
+.wr-album-livedates .wr-live-dates .container .live-date .location-and-time .time svg circle, .wr-album-livedates .wr-live-dates .container .live-date .location-and-time .time svg polyline {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  stroke-linejoin: miter;
+}
+.wr-album-livedates .wr-live-dates .container .live-date .button-normal {
+  padding-top: 8px;
+}
+.wr-album-livedates .wr-live-dates .container .live-date .button-normal button {
+  padding: 21px 37px;
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   font-family: "BarlowBold";
   font-size: calc(1rem * 0.875);
-  letter-spacing: 6px;
-  color: #fff;
-  cursor: pointer;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 0 35px 0;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .date {
-  position: absolute;
-  display: flex;
-  padding: 10px 23px 10px 22px;
-  flex-direction: column;
-  font-family: "BarlowSemiBold";
-  font-size: calc(1rem * 1.125);
-  color: #fff;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .date .date-number {
-  letter-spacing: 6px;
-  font-size: calc(1rem * 1.875);
-  color: #fb516e;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .img {
-  height: 80px;
-  width: 230px;
-  border-radius: 10px;
-  background: url(../images/john-raptis.jpg) no-repeat center/cover;
-  background-position: 78px -14px;
-  background-size: 70%;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .img::before {
-  content: "";
-  padding: 0 0px 63px 80px;
-  background: #1b2550;
-  border-radius: 10px 0 0 10px;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .title {
-  margin-left: -15px;
-  padding-top: 5px;
-  display: flex;
-  flex-direction: column;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .title h5 {
-  margin: 0;
-  font-family: "BarlowSemiBold";
-  font-size: calc(1rem * 1.625);
-  color: #fff;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .title span {
-  padding-top: 15px;
-  font-family: "RobotoRegular";
-  color: #778fc3;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .location-and-time {
-  margin-left: 150px;
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .location-and-time .location span {
-  display: inline-block;
-  padding: 3px 0 0 44px;
-  font-family: "RobotoRegular";
-  color: #778fc3;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .location-and-time .time {
-  padding-top: 21px;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .location-and-time .time span {
-  display: inline-block;
-  padding: 3px 0 0 44px;
-  font-family: "RobotoRegular";
-  color: #6aff7f;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .button-normal {
-  padding-top: 10px;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-2 .button-normal button {
-  padding: 26px 40px;
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  font-family: "BarlowBold";
-  font-size: calc(1rem * 0.875);
-  letter-spacing: 6px;
-  color: #fff;
-  cursor: pointer;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 0 38px 0;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .date {
-  position: absolute;
-  display: flex;
-  padding: 10px 23px 10px 22px;
-  flex-direction: column;
-  font-family: "BarlowSemiBold";
-  font-size: calc(1rem * 1.125);
-  color: #fff;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .date .date-number {
-  letter-spacing: 6px;
-  font-size: calc(1rem * 1.875);
-  color: #fb516e;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .img {
-  height: 80px;
-  width: 230px;
-  border-radius: 10px;
-  background: url(../images/edward-cisneroes.jpg) no-repeat center/cover;
-  background-position: 75px -2px;
-  background-size: 70%;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .img::before {
-  content: "";
-  padding: 0 0px 63px 80px;
-  background: #1b2550;
-  border-radius: 10px 0 0 10px;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .title {
-  margin-left: -15px;
-  padding-top: 5px;
-  display: flex;
-  flex-direction: column;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .title h5 {
-  margin: 0;
-  font-family: "BarlowSemiBold";
-  font-size: calc(1rem * 1.625);
-  color: #fff;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .title span {
-  padding-top: 15px;
-  font-family: "RobotoRegular";
-  color: #778fc3;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .location-and-time {
-  margin-left: 150px;
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .location-and-time .location span {
-  display: inline-block;
-  padding: 3px 0 0 44px;
-  font-family: "RobotoRegular";
-  color: #778fc3;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .location-and-time .time {
-  padding-top: 21px;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .location-and-time .time span {
-  display: inline-block;
-  padding: 3px 0 0 44px;
-  font-family: "RobotoRegular";
-  color: #6aff7f;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .button-normal {
-  padding-top: 10px;
-}
-.wr-album-livedates .wr-live-dates .container .live-date-3 .button-normal button {
-  padding: 26px 40px;
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  font-family: "BarlowBold";
-  font-size: calc(1rem * 0.875);
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   color: #fff;
   cursor: pointer;
 }
