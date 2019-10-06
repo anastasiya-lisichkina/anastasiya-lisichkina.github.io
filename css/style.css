@@ -249,11 +249,31 @@ header .container .social-navigation svg path, header .container .social-navigat
   padding: 40px 0 38px 0;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
 }
+.wr-album-livedates .wr-live-dates .container .live-date:hover .date-number {
+  color: #fff;
+}
+.wr-album-livedates .wr-live-dates .container .live-date:hover .img::before {
+  background: #032c9e;
+}
+.wr-album-livedates .wr-live-dates .container .live-date:hover button {
+  background-color: #032c9e;
+  border: 2px solid #032c9e;
+}
 .wr-album-livedates .wr-live-dates .container .live-date-last {
   display: flex;
   justify-content: space-between;
   padding: 40px 0 38px 0;
   border-bottom: none;
+}
+.wr-album-livedates .wr-live-dates .container .live-date-last:hover .date-number {
+  color: #fff;
+}
+.wr-album-livedates .wr-live-dates .container .live-date-last:hover .img::before {
+  background: #032c9e;
+}
+.wr-album-livedates .wr-live-dates .container .live-date-last:hover button {
+  background-color: #032c9e;
+  border: 2px solid #032c9e;
 }
 .wr-album-livedates .wr-live-dates .container .date {
   position: absolute;
@@ -265,6 +285,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   color: #fff;
 }
 .wr-album-livedates .wr-live-dates .container .date .date-number {
+  text-align: center;
   letter-spacing: 6px;
   font-size: calc(1rem * 1.875);
   color: #fb516e;

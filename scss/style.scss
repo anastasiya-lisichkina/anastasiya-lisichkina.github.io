@@ -271,6 +271,21 @@ header {
                 justify-content: space-between;
                 padding: 40px 0 38px 0;
                 border-bottom: 0.5px solid rgba(255, 255, 255, .5);
+
+                &:hover {
+                    .date-number {
+                        color: #fff;
+                    }
+                
+                    .img::before {
+                        background: #032c9e;
+                    }
+
+                    button {
+                        background-color: #032c9e;
+                        border: 2px solid #032c9e;
+                    }
+                }
             }
 
             .live-date-last {
@@ -278,6 +293,21 @@ header {
                 justify-content: space-between;
                 padding: 40px 0 38px 0;
                 border-bottom: none;
+
+                &:hover {
+                    .date-number {
+                        color: #fff;
+                    }
+                
+                    .img::before {
+                        background: #032c9e;
+                    }
+
+                    button {
+                        background-color: #032c9e;
+                        border: 2px solid #032c9e;
+                    }
+                }
             }
                 
             .date {
@@ -287,9 +317,10 @@ header {
                 flex-direction: column;
                 font-family: "BarlowSemiBold";
                 font-size: calc(1rem * 1.125);
-                color: #fff;    
+                color: #fff;
                     
                 .date-number {
+                    text-align: center;
                     letter-spacing: 6px;
                     font-size: calc(1rem * 1.875);
                     color: #fb516e;
