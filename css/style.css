@@ -52,12 +52,16 @@ header .container {
 }
 header .container .logo {
   align-items: center;
+<<<<<<< HEAD
   font-family: "BarlowBold";
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
   font-size: calc(1rem * 1.5);
   color: #fff;
   letter-spacing: 6px;
   text-decoration: none;
 }
+<<<<<<< HEAD
 header .container .logo .logo-bg {
   padding: 6px 8px 6px 8px;
   margin-right: -4px;
@@ -65,6 +69,11 @@ header .container .logo .logo-bg {
   font-size: calc(1rem * 1.5);
   color: #fff;
   letter-spacing: 3px;
+=======
+header .container .logo-bg {
+  padding: 6px 8px 6px 8px;
+  margin-right: -4px;
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
   background-color: #032c9e;
 }
 header .container .navigation {
@@ -214,7 +223,11 @@ header .container .social-navigation svg path, header .container .social-navigat
   position: relative;
   width: 100%;
   margin-top: -240px;
+<<<<<<< HEAD
   padding-top: 330px;
+=======
+  padding: 330px 0 300px 0;
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
   background: #0f152c;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 95%);
 }
@@ -419,11 +432,19 @@ header .container .social-navigation svg path, header .container .social-navigat
   z-index: -1;
   width: 100%;
   margin-top: -650px;
+<<<<<<< HEAD
   padding: 616px 0 300px 0;
   background: url(../images/ellipse-1-copy-3.png), url(../images/ellipse-2-copy.png), url(../images/jo-jo.png);
   background-position: 50% 0%, 88% 5%, 0% 8%;
   background-repeat: no-repeat;
   background-size: 182px 182px, 218px 218px, 100%;
+=======
+  padding: 616px 0 818px 0;
+  background: linear-gradient(to top, rgba(15, 21, 44, 0) 0%, #0f152c 100%), linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), url(../images/jo-jo.jpg);
+  background-position: 43% -93%;
+  background-repeat: no-repeat;
+  background-size: cover;
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 }
 .wr-album-livedates .wr-album .container {
   max-width: 1175px;
@@ -459,13 +480,21 @@ header .container .social-navigation svg path, header .container .social-navigat
   flex-direction: column;
   width: 100%;
   height: 955px;
+<<<<<<< HEAD
   padding: 90px 0 25px 0;
+=======
+  padding-top: 90px;
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 }
 .wr-album-livedates .wr-album .container .album-cover-1 {
   position: relative;
   width: 341px;
   height: 341px;
+<<<<<<< HEAD
   margin: 220px 0 0 3px;
+=======
+  margin: 220px 0 0 11px;
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
   background: url(../images/i-am-okay-album-cover.jpg), linear-gradient(to bottom, #6aff7f 0%, #6aff7f 100%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -484,6 +513,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   background: linear-gradient(to top, rgba(26, 36, 80, 0.6) 0%, rgba(26, 36, 80, 0.6) 100%);
   background-size: 100% 100%;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-1 .play-button {
   position: absolute;
   top: 50%;
@@ -501,6 +531,8 @@ header .container .social-navigation svg path, header .container .social-navigat
   stroke-linecap: square;
   stroke-miterlimit: 10;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-1:hover:before {
   opacity: 1;
 }
@@ -508,9 +540,12 @@ header .container .social-navigation svg path, header .container .social-navigat
   box-shadow: 10px 10px 54px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-1:hover .play-button {
   opacity: 1;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-2 {
   position: relative;
   width: 430px;
@@ -534,6 +569,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   background: linear-gradient(to top, rgba(26, 36, 80, 0.6) 0%, rgba(26, 36, 80, 0.6) 100%);
   background-size: 100% 100%;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-2 .play-button {
   position: absolute;
   top: 50%;
@@ -551,6 +587,8 @@ header .container .social-navigation svg path, header .container .social-navigat
   stroke-linecap: square;
   stroke-miterlimit: 10;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-2:hover:before {
   opacity: 1;
 }
@@ -558,9 +596,12 @@ header .container .social-navigation svg path, header .container .social-navigat
   box-shadow: 10px 10px 54px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-2:hover .play-button {
   opacity: 1;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-3 {
   position: relative;
   width: 430px;
@@ -585,6 +626,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   background: linear-gradient(to top, rgba(26, 36, 80, 0.6) 0%, rgba(26, 36, 80, 0.6) 100%);
   background-size: 100% 100%;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-3 .play-button {
   position: absolute;
   top: 50%;
@@ -602,16 +644,24 @@ header .container .social-navigation svg path, header .container .social-navigat
   stroke-linecap: square;
   stroke-miterlimit: 10;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-3:hover:before {
   opacity: 1;
 }
 .wr-album-livedates .wr-album .container .album-cover-3:hover {
+<<<<<<< HEAD
   box-shadow: 10px 10px 54px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 .wr-album-livedates .wr-album .container .album-cover-3:hover .play-button {
   opacity: 1;
 }
+=======
+  box-shadow: 10px 10px 54px 3px rgba(0, 0, 0, 0.4), inset 0px 0px 2px 10px rgba(51, 203, 204, 0.3);
+  cursor: pointer;
+}
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-4 {
   position: relative;
   width: 340px;
@@ -635,6 +685,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   background: linear-gradient(to top, rgba(26, 36, 80, 0.6) 0%, rgba(26, 36, 80, 0.6) 100%);
   background-size: 100% 100%;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-4 .play-button {
   position: absolute;
   top: 50%;
@@ -652,6 +703,8 @@ header .container .social-navigation svg path, header .container .social-navigat
   stroke-linecap: square;
   stroke-miterlimit: 10;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 .wr-album-livedates .wr-album .container .album-cover-4:hover:before {
   opacity: 1;
 }
@@ -659,6 +712,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   box-shadow: 10px 10px 54px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
+<<<<<<< HEAD
 .wr-album-livedates .wr-album .container .album-cover-4:hover .play-button {
   opacity: 1;
 }
@@ -686,5 +740,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   font-size: calc(1rem * 1.125);
   color: #fff;
 }
+=======
+>>>>>>> b01aed0f5f92518da3aa8291bfe1b65093e7a79c
 
 /*# sourceMappingURL=style.css.map */
