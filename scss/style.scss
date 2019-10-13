@@ -498,7 +498,7 @@ header {
                 padding-bottom: 26px;
                 font-family: "BarlowSemiBold";
                 font-size: calc(1rem * 3.75);
-                color: #fff
+                color: #fff;
             }
 
             .divider {
@@ -867,24 +867,224 @@ header {
 
 .wr-news {
     position: relative;
-    z-index: 4;
+    z-index: -1;
     width: 100%;
-    margin-top: -330px;
-    padding: 312px 0 818px 0;
-    background-image: url(../);
-    background-position: 11.5% 39.5%, 5.5% 35%, 125% 68%, 43% -93%, 62% 96%, 64% 100%;
+    margin-top: -410px;
+    padding: 570px 0 510px 0;
+    background-image: url(../images/ellipse-1-copy-5.png), url(../images/joseph-young.png), url(../images/shape-1-news.png), url(../images/shape-1-copy-news.png);
+    background-position: 5% 98%, 50% 0%, 45% 91%, 40% 90%;
+    background-repeat: no-repeat;
+
+    .container {
+        @include container(1170px, 100%, 0 auto, 0 19px);
+        display: flex;
+        justify-content: space-between;
+        
+        .slide-news {
+            display: flex;
+            flex-direction: column;
+            width: 579px;
+            height: 666px;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(73, 191, 168, .7);
+            border-radius: 10px;
+            list-style: none;
+
+            @mixin slide-normal-link {
+                a {
+                    display: block;
+                    padding: 48px 0 43px 70px;
+                    font-family: "BarlowSemiBold";
+                    font-size: calc(1rem * 1.375);
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+
+            .slide-normal-1 {
+                background-color: rgba(73, 191, 168, .4);
+                border-radius: 10px 10px 0 0;
+                @include slide-normal-link;
+            }
+
+            .slide-active {
+                height: 219px;
+                background-color: #032c9e;
+                border-radius: 0;
+                
+                span {
+                    display: block;
+                    padding: 50px 0 0 70px;
+                    font-family: "BarlowBold";
+                    font-size: calc(1rem * 0.8125);
+                    color: #fff;
+                    letter-spacing: 2px;
+                }
+
+                h4 {
+                    margin: 0;
+                    padding: 20px 0 0 70px;
+                    font-family: "BarlowSemiBold";
+                    font-size: calc(1rem * 1.625);
+                    color: #fff;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 23px 65px 0 70px;
+                    font-family: "RobotoRegular";
+                    color: #5882f5;
+                    line-height: 30px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis; 
+                }
+
+                &:before{
+                    content: " ";
+                    position: absolute;
+                    margin-left: -10px;
+                    background-color: #6aff7f;
+                    height: 215px;
+                    width: 10px;
+                }
+            }
+
+            .slide-normal-2 {
+                background-color: rgba(3, 44, 158, .6);
+                border-radius: 0;
+                @include slide-normal-link;
+            }
+
+            .slide-normal-3 {
+                background-color: rgba(3, 44, 158, .4);
+                border-radius: 0;
+                @include slide-normal-link;
+            }
+
+            .slide-view-all {
+                a {
+                    display: block;
+                    padding: 32px 0 0 70px;
+                    text-decoration: none;
+
+                    svg {
+                        position: absolute;
+                        padding-left: 20px;
+                        width: 24px;
+                        height: 24px;
+                        @include svg-size(24px, 24px);
+
+                        line, polyline {
+                            @include svg-features;
+                        }   
+                    }
+
+                &::before {
+                    content: "View all latest news ::";
+                    font-family: "BarlowMedium";
+                    font-size: calc(1rem * 1.125);
+                    color: #fff;
+                }
+            }
+        }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 502px;
+
+            .column {
+                font-family: "BarlowBold";
+                font-size: calc(1rem * 1.125);
+                color: #fff;
+                letter-spacing: 3px;
+            }
+
+            h2 {
+                margin: 0;
+                padding-top: 40px;
+                font-family: "BarlowSemiBold";
+                font-size: calc(1rem * 3.75);
+                color: #fff;
+                line-height: 77px;
+            }
+
+            .divider {
+                @include divider;
+                margin-top: 50px;
+            }
+
+            .date {
+                padding-top: 50px;
+                font-family: "BarlowBold";
+                color: #fff;
+                letter-spacing: 2px;
+            }
+
+            p {
+                margin: 0;
+                padding-top: 50px;
+                font-family: "RobotoRegular";
+                font-size: calc(1rem * 1.125);
+                color: #fff;
+                line-height: 30px;
+            }
+
+            button {
+                margin-top: 40px;
+                padding: 26px 44px;
+                background-color: transparent;
+                border: 2px solid rgba(255, 255, 255, .5);
+                font-family: "BarlowBold";
+                font-size: calc(1rem * 0.875);
+                letter-spacing: 3px;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.wr-footer {
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    margin-top: -748px;
+    padding: 834px 0 510px 0;
+    background-image: url(../images/ellipse-1-copy-6.png), url(../images/ellipse-1-copy-4.png), url(../images/marc-antonie-depelteau.jpg);
+    background-position: 10% 0%, 45% 91%, 50% 0%;
     background-repeat: no-repeat;
 
     .container {
         @include container(1170px, 100%, 0 auto, 0 19px);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
 
+        h2 {
+            margin: 0;
+            padding-bottom: 26px;
+            font-family: "BarlowSemiBold";
+            font-size: calc(1rem * 3.75);
+            color: #fff;
+        }
 
+        .divider {
+            @include divider;
+            margin-top: 30px;
+        }
+
+        span {
+            padding-top: 30px;
+            font-family: "RobotoLight";
+            font-size: calc(1rem * 1.25);
+            color: #778fc3;
+        }     
     }
 }
-
 
 
 
