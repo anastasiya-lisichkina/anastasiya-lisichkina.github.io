@@ -29,6 +29,7 @@
         color: #fff;
         letter-spacing: 6px;
         text-decoration: none;
+        transition: .1s ease-in-out;
 
     .logo-bg {
         padding: 6px 8px 6px 8px;
@@ -39,13 +40,21 @@
         letter-spacing: 3px;
         background-color: #032c9e;
         }
+
+        &:hover {
+            text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;
+        }
     }
 }
 
 @mixin divider {
-    width: 145px;
-    height: 5px;
-    background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 145px;
+        height: 5px;
+        background: linear-gradient(to right, #33cbcc 86.2%, #032c9e 86.2%, #032c9e 93%, #6aff7f 93%);
 }
 
 @mixin svg-size($width, $height) {
@@ -107,7 +116,7 @@ header {
                 padding: 0 27px;
                 text-decoration: none;
                 color: #fff;
-
+                
                 &:hover::after {
                     content: "";
                     position: absolute;
@@ -130,15 +139,20 @@ header {
                 }
 
                 svg {
+                    transition: .1s ease-in-out;
                     @include svg-size(16px, 16px);
 
                    path, circle {
                         fill: #fff;
                     }
+
+                    &:hover{
+                        filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+                    }
                 }
             }
         }
-}
+    }
 
 .wr-slides {
     position: relative;
@@ -162,7 +176,7 @@ header {
             .caption {
                 width: 600px;
                 height: 42px;
-                background: linear-gradient(to right, #1b2550 520px, #fb516e 520px, #fb516e 535px, #6aff7f 535px);
+                background: linear-gradient(to right, #1b2550 86.6%, #fb516e 86.6%, #fb516e 89%, #6aff7f 89%);
 
                 h3 {
                     margin: 0;
@@ -176,7 +190,6 @@ header {
 
             h1 {
                 margin: 0;
-                padding-top: 5px;
                 font-family: "BarlowBold";
                 font-size: calc(1rem * 7.5);
                 color: #fff
@@ -184,7 +197,6 @@ header {
 
             h4 {
                 margin: 0;
-                padding-top: 7px;
                 font-family: "BarlowMedium";
                 font-size: calc(1rem * 2.25);
                 font-weight: 100;
@@ -205,7 +217,13 @@ header {
                     letter-spacing: 6px;
                     color: #fff;
                     cursor: pointer;
-                }
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        background-color: #032c9e;
+                        border: 4px solid #032c9e;
+                    }
+                }                    
 
                 a {
                     padding-left: 30px;
@@ -214,6 +232,7 @@ header {
                     letter-spacing: 6px;
                     color: #fff;
                     text-decoration: none;
+                    transition: .2s ease-in-out;
 
                     svg {
                         @include svg-size(64px, 64px);
@@ -222,26 +241,29 @@ header {
                             @include svg-features;
                         }
                     }
-                }
+                     
+                     &:hover {
+                        
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            transform: translate(-6px, -6px);
+                            padding: 6px;
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 100%;
+                            background: rgba(3, 44, 158, 1);
+                        }
+                    }
 
-                a:before {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
-                    transform: translate(-6px, -6px);
-                    padding: 6px;
-                    width: 64px;
-                    height: 64px;
-                    border-radius: 100%;
-                    background: rgba(0, 0, 0, 0.29);
-                }
-
-                a:after {
-                    content: "PLAY ALL SONGS";
-                    position: absolute;
-                    padding-left: 20px;
-                    transform: translate(0, 20px);
-                }
+                    &:after {
+                        content: "PLAY ALL SONGS";
+                        position: absolute;
+                        padding-left: 20px;
+                        transform: translate(0, 20px);
+                    }
+                }               
             }
         }    
     } 
@@ -250,6 +272,7 @@ header {
 
 .wr-album-livedates {
     position: relative;
+    z-index: 5;
     width: 100%;
     margin-top: -240px;
     padding-top: 330px;
@@ -277,16 +300,17 @@ header {
             justify-content: space-between;
 
             h2 {
+                position: relative;
                 margin: 0;
                 padding-bottom: 27px;
                 font-family: "BarlowSemiBold";
                 font-size: calc(1rem * 3.75);
-                color: #fff
-            }
-
-            .divider {
-                @include divider;
+                color: #fff;
                 margin-bottom: 95px;
+
+                &:before {
+                    @include divider;
+                }
             }
 
             .live-date {
@@ -347,6 +371,7 @@ header {
                     letter-spacing: 6px;
                     font-size: calc(1rem * 1.875);
                     color: #fb516e;
+                    transition: .2s ease-in-out;
                 }
             }
 
@@ -367,6 +392,7 @@ header {
                     padding: 0 0px 63px 80px;
                     background: #1b2550;
                     border-radius: 10px 0 0 10px;
+                    transition: .2s ease-in-out;
                 }
             }
                 
@@ -447,6 +473,7 @@ header {
                     letter-spacing: 3px;
                     color: #fff;
                     cursor: pointer;
+                    transition: .2s ease-in-out;
                 }
             }
 
@@ -466,14 +493,29 @@ header {
             }
 
             .link-view-all-dates {
+                position: relative;
                 padding-top: 35px;
-                text-decoration: none;
-                font-family: "BarlowMedium";
-                font-size: calc(1rem * 1.125);
-                color: #fff;
+
+                a {
+                    position: relative;
+                    padding: 0 8px;
+                    text-decoration: none;
+                    font-family: "BarlowMedium";
+                    font-size: calc(1rem * 1.125);
+                    color: #fff;
+
+                    &:hover::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 53%;
+                        left: 0;
+                        right: 0;
+                        border-bottom: 2px solid #fff;
+                    }
+                }
             }
-        }     
-            
+        }               
     }
 
     .wr-album {
@@ -494,15 +536,17 @@ header {
             align-items: center;
 
             h2 {
+                position: relative;
                 margin: 0;
                 padding-bottom: 26px;
                 font-family: "BarlowSemiBold";
                 font-size: calc(1rem * 3.75);
                 color: #fff;
-            }
-
-            .divider {
-                @include divider;
+                
+                &:before {
+                    left: 35% !important;
+                    @include divider;
+                }
             }
 
             span {
@@ -650,7 +694,7 @@ header {
 
                 h3 {
                     margin: 0;
-                    position: relative;
+                    position: absolute;
                     left: 49px;
                     top: 189px;
                     background: url("../images/dont-let-me-down-cover.jpg") 50% 43% no-repeat;
@@ -660,31 +704,37 @@ header {
                     font-family: "BarlowBold";
                     font-size: calc(1rem * 4.26);
                     letter-spacing: 6px;
-
-                    &:after {
-                        content: attr(title); 
-	                    position: absolute;
-	                    left: 0;
-	                    top: 100%; 
-	                    width: 100%;
-	                    height: 100%;
-	                    transform: scaleY(-1);
-	                    z-index: 1; 
-                        }
-                    }
+                }
 
                 @include album-cover-bg-features(url(../images/alone-album-cover.jpg), linear-gradient(to bottom, #6aff7f 0%, #6aff7f 100%), 340px, 340px, 340px 0 0 30px, 50%);
                 @include album-cover-hover-features;
             }
 
-            @include logo;
-
             .link-view-all-albums {
-                padding-top: 20px;
-                text-decoration: none;
-                font-family: "BarlowMedium";
-                font-size: calc(1rem * 1.125);
-                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                @include logo;
+
+                .link-albums {
+                    position: relative;
+                    padding: 20px 8px 0 8px;
+                    text-decoration: none;
+                    font-family: "BarlowMedium";
+                    font-size: calc(1rem * 1.125);
+                    color: #fff;
+
+                    &:hover::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 79%;
+                        left: 0;
+                        right: 0;
+                        border-bottom: 2px solid #fff;
+                    }
+                }
             }
         }
     }
@@ -714,16 +764,17 @@ header {
                 flex-direction: column;
                 
                 h2 {
+                    position: relative;
                     margin: 0;
                     padding-bottom: 26px;
                     font-family: "BarlowSemiBold";
                     font-size: calc(1rem * 3.75);
                     color: #fff;
                     line-height: 77px;
-                }
 
-                .divider {
-                    @include divider;
+                    &:before {    
+                        @include divider;
+                    }
                 }
 
                 ul {
@@ -867,7 +918,7 @@ header {
 
 .wr-news {
     position: relative;
-    z-index: -1;
+    z-index: 4;
     width: 100%;
     margin-top: -410px;
     padding: 570px 0 510px 0;
@@ -1004,17 +1055,17 @@ header {
             }
 
             h2 {
+                position: relative;
                 margin: 0;
-                padding-top: 40px;
+                padding: 40px 0 50px 0;
                 font-family: "BarlowSemiBold";
                 font-size: calc(1rem * 3.75);
                 color: #fff;
                 line-height: 77px;
-            }
-
-            .divider {
-                @include divider;
-                margin-top: 50px;
+                
+                &:before {
+                    @include divider;
+                }
             }
 
             .date {
@@ -1043,19 +1094,26 @@ header {
                 letter-spacing: 3px;
                 color: #fff;
                 cursor: pointer;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    background-color: #fff;
+                    border: 2px solid #fff;
+                    color: #032c9e;
+                }
             }
         }
     }
 }
 
-.wr-footer {
-    position: relative;
-    z-index: -2;
+footer {
+    position: sticky;
+    z-index: 3;
     width: 100%;
-    margin-top: -748px;
-    padding: 834px 0 510px 0;
+    margin-top: -746px;
+    padding: 750px 0 100px 0;
     background-image: url(../images/ellipse-1-copy-6.png), url(../images/ellipse-1-copy-4.png), url(../images/marc-antonie-depelteau.jpg);
-    background-position: 10% 0%, 45% 91%, 50% 0%;
+    background-position: 10% 55%, 15% 48%, 50% 0%;
     background-repeat: no-repeat;
 
     .container {
@@ -1065,16 +1123,17 @@ header {
         align-items: center;
 
         h2 {
+            position: relative;
             margin: 0;
-            padding-bottom: 26px;
+            padding: 30px 0 26px 0;
             font-family: "BarlowSemiBold";
             font-size: calc(1rem * 3.75);
             color: #fff;
-        }
 
-        .divider {
-            @include divider;
-            margin-top: 30px;
+            &:before {
+                left: 35% !important;
+                @include divider;
+            }
         }
 
         span {
@@ -1082,7 +1141,118 @@ header {
             font-family: "RobotoLight";
             font-size: calc(1rem * 1.25);
             color: #778fc3;
-        }     
+        }
+
+        @mixin input-features {
+            width: 402px;
+            padding: 20px 0 20px 0;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, .5);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 70px;
+
+            [type="text"] {
+                @include input-features;
+            }
+
+            [type="email"] {
+                margin-top: 30px;
+                @include input-features;
+            }
+
+            [type="text"]::placeholder, [type="email"]::placeholder, .btn-sign-up { 
+                font-family: "BarlowBold";
+                color: #fff; 
+                letter-spacing: 2px;
+            }
+        
+            .btn-sign-up {
+                width: 402px;
+                margin-top: 40px;
+                padding: 26px 145px;
+                border: none;
+                background-color: transparent;
+                border: 2px solid rgba(255, 255, 255, .5);
+            }
+        }
+
+        .ft-logo {
+            margin-top: 200px;
+            align-items: center;
+            font-family: "BarlowBold";
+            font-size: calc(1rem * 2);
+            color: #fff;
+            letter-spacing: 6px;
+            text-decoration: none;
+            transition: .1s ease-in-out;
+    
+        .logo-bg {
+            padding: 6px 8px 6px 8px;
+            margin-right: -4px;
+            font-family: "BarlowBold";
+            font-size: calc(1rem * 2);
+            color: #fff;
+            letter-spacing: 3px;
+            background-color: #032c9e;
+            }
+    
+            &:hover {
+                text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;
+            }
+        }
+
+        .ft-menu {
+            display: flex;
+            margin-top: 70px;
+            padding: 0;
+            list-style: none;
+
+            a {
+                padding: 0 25px;
+                font-family: "BarlowBold";
+                font-size: calc(1rem * 0.875);
+                color: #fff;
+                letter-spacing: 2px;
+                text-decoration: none;
+            }
+
+            .menu-active {
+                color: #fff; 
+            }
+        
+            .menu-disabled {
+                color: #48547c; 
+            } 
+        }
+
+        .ft-social-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 40px 0 0 0;
+
+            a {
+                padding: 0 16px;
+                text-decoration: none;
+            }
+
+            svg {
+                @include svg-size(16px, 16px);
+
+               path, circle {
+                    fill: rgb(72, 84, 124);
+                }
+
+                &:hover{
+                    filter: drop-shadow(0px 0px 5px rgba(72, 84, 124, 1));
+                }
+            } 
+        }
     }
 }
 

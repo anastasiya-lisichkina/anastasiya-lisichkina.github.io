@@ -62,6 +62,7 @@ header .container .logo {
   color: #fff;
   letter-spacing: 6px;
   text-decoration: none;
+  transition: 0.1s ease-in-out;
 }
 header .container .logo .logo-bg {
   padding: 6px 8px 6px 8px;
@@ -71,6 +72,9 @@ header .container .logo .logo-bg {
   color: #fff;
   letter-spacing: 3px;
   background-color: #032c9e;
+}
+header .container .logo:hover {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;
 }
 header .container .navigation {
   display: flex;
@@ -106,11 +110,15 @@ header .container .social-navigation li {
   padding: 0 16px;
 }
 header .container .social-navigation svg {
+  transition: 0.1s ease-in-out;
   width: 16px;
   height: 16px;
 }
 header .container .social-navigation svg path, header .container .social-navigation svg circle {
   fill: #fff;
+}
+header .container .social-navigation svg:hover {
+  filter: drop-shadow(0px 0px 5px white);
 }
 
 .wr-slides {
@@ -137,7 +145,7 @@ header .container .social-navigation svg path, header .container .social-navigat
 .wr-slides .container .content .caption {
   width: 600px;
   height: 42px;
-  background: linear-gradient(to right, #1b2550 520px, #fb516e 520px, #fb516e 535px, #6aff7f 535px);
+  background: linear-gradient(to right, #1b2550 86.6%, #fb516e 86.6%, #fb516e 89%, #6aff7f 89%);
 }
 .wr-slides .container .content .caption h3 {
   margin: 0;
@@ -149,14 +157,12 @@ header .container .social-navigation svg path, header .container .social-navigat
 }
 .wr-slides .container .content h1 {
   margin: 0;
-  padding-top: 5px;
   font-family: "BarlowBold";
   font-size: calc(1rem * 7.5);
   color: #fff;
 }
 .wr-slides .container .content h4 {
   margin: 0;
-  padding-top: 7px;
   font-family: "BarlowMedium";
   font-size: calc(1rem * 2.25);
   font-weight: 100;
@@ -176,6 +182,11 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 6px;
   color: #fff;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.wr-slides .container .content .buttons button:hover {
+  background-color: #032c9e;
+  border: 4px solid #032c9e;
 }
 .wr-slides .container .content .buttons a {
   padding-left: 30px;
@@ -184,6 +195,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 6px;
   color: #fff;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
 }
 .wr-slides .container .content .buttons a svg {
   width: 64px;
@@ -197,7 +209,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   stroke-miterlimit: 10;
   stroke-linejoin: miter;
 }
-.wr-slides .container .content .buttons a:before {
+.wr-slides .container .content .buttons a:hover:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -206,7 +218,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   width: 64px;
   height: 64px;
   border-radius: 100%;
-  background: rgba(0, 0, 0, 0.29);
+  background: #032c9e;
 }
 .wr-slides .container .content .buttons a:after {
   content: "PLAY ALL SONGS";
@@ -217,6 +229,7 @@ header .container .social-navigation svg path, header .container .social-navigat
 
 .wr-album-livedates {
   position: relative;
+  z-index: 5;
   width: 100%;
   margin-top: -240px;
   padding-top: 330px;
@@ -246,17 +259,22 @@ header .container .social-navigation svg path, header .container .social-navigat
   justify-content: space-between;
 }
 .wr-album-livedates .wr-live-dates .container h2 {
+  position: relative;
   margin: 0;
   padding-bottom: 27px;
   font-family: "BarlowSemiBold";
   font-size: calc(1rem * 3.75);
   color: #fff;
+  margin-bottom: 95px;
 }
-.wr-album-livedates .wr-live-dates .container .divider {
+.wr-album-livedates .wr-live-dates .container h2:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
   width: 145px;
   height: 5px;
-  background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
-  margin-bottom: 95px;
+  background: linear-gradient(to right, #33cbcc 86.2%, #032c9e 86.2%, #032c9e 93%, #6aff7f 93%);
 }
 .wr-album-livedates .wr-live-dates .container .live-date {
   display: flex;
@@ -304,6 +322,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 6px;
   font-size: calc(1rem * 1.875);
   color: #fb516e;
+  transition: 0.2s ease-in-out;
 }
 .wr-album-livedates .wr-live-dates .container .img {
   height: 82px;
@@ -321,6 +340,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   padding: 0 0px 63px 80px;
   background: #1b2550;
   border-radius: 10px 0 0 10px;
+  transition: 0.2s ease-in-out;
 }
 .wr-album-livedates .wr-live-dates .container .title {
   padding-top: 5px;
@@ -399,6 +419,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 3px;
   color: #fff;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 .wr-album-livedates .wr-live-dates .container .button-copy {
   padding-top: 8px;
@@ -414,11 +435,25 @@ header .container .social-navigation svg path, header .container .social-navigat
   cursor: pointer;
 }
 .wr-album-livedates .wr-live-dates .container .link-view-all-dates {
+  position: relative;
   padding-top: 35px;
+}
+.wr-album-livedates .wr-live-dates .container .link-view-all-dates a {
+  position: relative;
+  padding: 0 8px;
   text-decoration: none;
   font-family: "BarlowMedium";
   font-size: calc(1rem * 1.125);
   color: #fff;
+}
+.wr-album-livedates .wr-live-dates .container .link-view-all-dates a:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 53%;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #fff;
 }
 .wr-album-livedates .wr-album {
   position: relative;
@@ -441,16 +476,22 @@ header .container .social-navigation svg path, header .container .social-navigat
   align-items: center;
 }
 .wr-album-livedates .wr-album .container h2 {
+  position: relative;
   margin: 0;
   padding-bottom: 26px;
   font-family: "BarlowSemiBold";
   font-size: calc(1rem * 3.75);
   color: #fff;
 }
-.wr-album-livedates .wr-album .container .divider {
+.wr-album-livedates .wr-album .container h2:before {
+  left: 35% !important;
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
   width: 145px;
   height: 5px;
-  background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
+  background: linear-gradient(to right, #33cbcc 86.2%, #032c9e 86.2%, #032c9e 93%, #6aff7f 93%);
 }
 .wr-album-livedates .wr-album .container span {
   padding-top: 36px;
@@ -675,7 +716,7 @@ header .container .social-navigation svg path, header .container .social-navigat
 }
 .wr-album-livedates .wr-album .container .album-cover-4 h3 {
   margin: 0;
-  position: relative;
+  position: absolute;
   left: 49px;
   top: 189px;
   background: url("../images/dont-let-me-down-cover.jpg") 50% 43% no-repeat;
@@ -685,16 +726,6 @@ header .container .social-navigation svg path, header .container .social-navigat
   font-family: "BarlowBold";
   font-size: calc(1rem * 4.26);
   letter-spacing: 6px;
-}
-.wr-album-livedates .wr-album .container .album-cover-4 h3:after {
-  content: attr(title);
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(-1);
-  z-index: 1;
 }
 .wr-album-livedates .wr-album .container .album-cover-4:before {
   content: "";
@@ -737,15 +768,21 @@ header .container .social-navigation svg path, header .container .social-navigat
 .wr-album-livedates .wr-album .container .album-cover-4:hover .play-button {
   opacity: 1;
 }
-.wr-album-livedates .wr-album .container .logo {
+.wr-album-livedates .wr-album .container .link-view-all-albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wr-album-livedates .wr-album .container .link-view-all-albums .logo {
   align-items: center;
   font-family: "BarlowBold";
   font-size: calc(1rem * 1.5);
   color: #fff;
   letter-spacing: 6px;
   text-decoration: none;
+  transition: 0.1s ease-in-out;
 }
-.wr-album-livedates .wr-album .container .logo .logo-bg {
+.wr-album-livedates .wr-album .container .link-view-all-albums .logo .logo-bg {
   padding: 6px 8px 6px 8px;
   margin-right: -4px;
   font-family: "BarlowBold";
@@ -754,12 +791,25 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 3px;
   background-color: #032c9e;
 }
-.wr-album-livedates .wr-album .container .link-view-all-albums {
-  padding-top: 20px;
+.wr-album-livedates .wr-album .container .link-view-all-albums .logo:hover {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;
+}
+.wr-album-livedates .wr-album .container .link-view-all-albums .link-albums {
+  position: relative;
+  padding: 20px 8px 0 8px;
   text-decoration: none;
   font-family: "BarlowMedium";
   font-size: calc(1rem * 1.125);
   color: #fff;
+}
+.wr-album-livedates .wr-album .container .link-view-all-albums .link-albums:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 79%;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #fff;
 }
 .wr-album-livedates .wr-social {
   position: relative;
@@ -788,6 +838,7 @@ header .container .social-navigation svg path, header .container .social-navigat
   flex-direction: column;
 }
 .wr-album-livedates .wr-social .container .social-links h2 {
+  position: relative;
   margin: 0;
   padding-bottom: 26px;
   font-family: "BarlowSemiBold";
@@ -795,10 +846,14 @@ header .container .social-navigation svg path, header .container .social-navigat
   color: #fff;
   line-height: 77px;
 }
-.wr-album-livedates .wr-social .container .social-links .divider {
+.wr-album-livedates .wr-social .container .social-links h2:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
   width: 145px;
   height: 5px;
-  background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
+  background: linear-gradient(to right, #33cbcc 86.2%, #032c9e 86.2%, #032c9e 93%, #6aff7f 93%);
 }
 .wr-album-livedates .wr-social .container .social-links ul {
   padding: 0;
@@ -955,7 +1010,7 @@ header .container .social-navigation svg path, header .container .social-navigat
 
 .wr-news {
   position: relative;
-  z-index: -1;
+  z-index: 4;
   width: 100%;
   margin-top: -410px;
   padding: 570px 0 510px 0;
@@ -1095,18 +1150,22 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 3px;
 }
 .wr-news .container .content h2 {
+  position: relative;
   margin: 0;
-  padding-top: 40px;
+  padding: 40px 0 50px 0;
   font-family: "BarlowSemiBold";
   font-size: calc(1rem * 3.75);
   color: #fff;
   line-height: 77px;
 }
-.wr-news .container .content .divider {
+.wr-news .container .content h2:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
   width: 145px;
   height: 5px;
-  background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
-  margin-top: 50px;
+  background: linear-gradient(to right, #33cbcc 86.2%, #032c9e 86.2%, #032c9e 93%, #6aff7f 93%);
 }
 .wr-news .container .content .date {
   padding-top: 50px;
@@ -1132,19 +1191,25 @@ header .container .social-navigation svg path, header .container .social-navigat
   letter-spacing: 3px;
   color: #fff;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.wr-news .container .content button:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #032c9e;
 }
 
-.wr-footer {
-  position: relative;
-  z-index: -2;
+footer {
+  position: sticky;
+  z-index: 3;
   width: 100%;
-  margin-top: -748px;
-  padding: 834px 0 510px 0;
+  margin-top: -746px;
+  padding: 750px 0 100px 0;
   background-image: url(../images/ellipse-1-copy-6.png), url(../images/ellipse-1-copy-4.png), url(../images/marc-antonie-depelteau.jpg);
-  background-position: 10% 0%, 45% 91%, 50% 0%;
+  background-position: 10% 55%, 15% 48%, 50% 0%;
   background-repeat: no-repeat;
 }
-.wr-footer .container {
+footer .container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
@@ -1153,24 +1218,124 @@ header .container .social-navigation svg path, header .container .social-navigat
   flex-direction: column;
   align-items: center;
 }
-.wr-footer .container h2 {
+footer .container h2 {
+  position: relative;
   margin: 0;
-  padding-bottom: 26px;
+  padding: 30px 0 26px 0;
   font-family: "BarlowSemiBold";
   font-size: calc(1rem * 3.75);
   color: #fff;
 }
-.wr-footer .container .divider {
+footer .container h2:before {
+  left: 35% !important;
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
   width: 145px;
   height: 5px;
-  background: linear-gradient(to right, #33cbcc 125px, #032c9e 125px, #032c9e 135px, #6aff7f 135px);
-  margin-top: 30px;
+  background: linear-gradient(to right, #33cbcc 86.2%, #032c9e 86.2%, #032c9e 93%, #6aff7f 93%);
 }
-.wr-footer .container span {
+footer .container span {
   padding-top: 30px;
   font-family: "RobotoLight";
   font-size: calc(1rem * 1.25);
   color: #778fc3;
+}
+footer .container form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+footer .container form [type=text] {
+  width: 402px;
+  padding: 20px 0 20px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+footer .container form [type=email] {
+  margin-top: 30px;
+  width: 402px;
+  padding: 20px 0 20px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+footer .container form [type=text]::placeholder, footer .container form [type=email]::placeholder, footer .container form .btn-sign-up {
+  font-family: "BarlowBold";
+  color: #fff;
+  letter-spacing: 2px;
+}
+footer .container form .btn-sign-up {
+  width: 402px;
+  margin-top: 40px;
+  padding: 26px 145px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+footer .container .ft-logo {
+  margin-top: 200px;
+  align-items: center;
+  font-family: "BarlowBold";
+  font-size: calc(1rem * 2);
+  color: #fff;
+  letter-spacing: 6px;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+}
+footer .container .ft-logo .logo-bg {
+  padding: 6px 8px 6px 8px;
+  margin-right: -4px;
+  font-family: "BarlowBold";
+  font-size: calc(1rem * 2);
+  color: #fff;
+  letter-spacing: 3px;
+  background-color: #032c9e;
+}
+footer .container .ft-logo:hover {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;
+}
+footer .container .ft-menu {
+  display: flex;
+  margin-top: 70px;
+  padding: 0;
+  list-style: none;
+}
+footer .container .ft-menu a {
+  padding: 0 25px;
+  font-family: "BarlowBold";
+  font-size: calc(1rem * 0.875);
+  color: #fff;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+footer .container .ft-menu .menu-active {
+  color: #fff;
+}
+footer .container .ft-menu .menu-disabled {
+  color: #48547c;
+}
+footer .container .ft-social-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 40px 0 0 0;
+}
+footer .container .ft-social-links a {
+  padding: 0 16px;
+  text-decoration: none;
+}
+footer .container .ft-social-links svg {
+  width: 16px;
+  height: 16px;
+}
+footer .container .ft-social-links svg path, footer .container .ft-social-links svg circle {
+  fill: #48547c;
+}
+footer .container .ft-social-links svg:hover {
+  filter: drop-shadow(0px 0px 5px #48547c);
 }
 
 /*# sourceMappingURL=style.css.map */
